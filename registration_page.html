@@ -2,7 +2,8 @@
 <html>
     <head>
         <script>
-                 function reg(){
+                 function reg(event) {
+                      event.preventDefault();
                     let a=document.getElementById("nm").value;
                     let b=document.getElementById("mb").value;
                     let c=document.getElementById("em").value;
@@ -20,14 +21,14 @@
 
 <body>
     <center>
-        <form><br>
+         <form onsubmit="reg(event)"><br>
             Name<input type="text" id="nm" placeholder="Enter your name.." required><br><br>
             Mobile No.<input type="number" id="mb" placeholder="Enter your mobile no.." required><br><br>
             Email<input type="email" id="em" placeholder="Enter your email.." required><br><br>
             Password<input type="password" id="pw" placeholder="Choose your password" required 
                         ><br><br><br>
-        </form>
-        <input type="button" id="reg" onclick="reg()" value="Register Me" >
+        <button type="submit" id="reg" onclick="reg()" value="Register Me" >
+         </form>
     </center>
 </body>
 </html>
