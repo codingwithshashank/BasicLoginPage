@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         function home(){
+                let l=localStorage.getItem("name");
+                let m=localStorage.getItem("mobile no.");
+                let n=localStorage.getItem("email");
+                let o=localStorage.getItem("password");
+
+                document.getElementById("e").innerHTML="Name: "+l;
+                document.getElementById("f").innerHTML="Mobile No.: "+m;
+                document.getElementById("g").innerHTML="Email ID: "+n;
+                document.getElementById("h").innerHTML="Password  "+o;
+         }
+         
+         function res(){
+        window.location.href="index.html";
+       }
+    </script>
+</head>
+<body onload="home()">
+    <center>
+        <h1>Register Detail are:</h1>
+        <h5 id="e"></h5>
+        <h5 id="f"></h5>
+        <h5 id="g"></h5>
+        <h5 id="h"></h5>
+
+  <br>
+  <br>
+  <button type="button" class="btn btn-info" onclick="res()">Home</button>
+    </center>
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <script>
+             function login(){
+                let p=document.getElementById("email").value;
+                let q=document.getElementById("password").value;
+
+                let x=localStorage.getItem("email");
+                let y=localStorage.getItem("password");
+
+                if(p===x && q===y){
+                    window.location.href="detail_page.html";
+                }
+                else{
+                    alert("Wrong credential");
+                }
+             }
+      </Script>
+</head>
+<body>
+    <center>
+          <form>
+            Email<input type="email" id="email" placeholder="enter your Register email">
+            Password<input type="password" id="password" placeholder="enter your password">
+          </form>
+
+          <input type="button" id="login" onclick="login()" value="Login">
+    </center>
+</body>
+</html>

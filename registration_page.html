@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                 function reg(){
+                    let a=document.getElementById("nm").value;
+                    let b=document.getElementById("mb").value;
+                    let c=document.getElementById("em").value;
+                    let d=document.getElementById("pw").value;
+                    
+                    localStorage.setItem("name",a);
+                    localStorage.setItem("mobile no.",b);
+                    localStorage.setItem("email",c);
+                    localStorage.setItem("password",d);
+
+                    window.location.href="login_page.html";
+                 }
+        </script>
+    </head>
+
+<body>
+    <center>
+        <form><br>
+            Name<input type="text" id="nm" placeholder="Enter your name.."><br><br>
+            Mobile No.<input type="number" id="mb" placeholder="Enter your mobile no.."><br><br>
+            Email<input type="email" id="em" placeholder="Enter your email.."><br><br>
+            Password<input type="password" id="pw" placeholder="Choose your password"><br><br><br>
+        </form>
+        <input type="button" id="reg" onclick="reg()" value="Register Me" >
+    </center>
+</body>
+</html>
