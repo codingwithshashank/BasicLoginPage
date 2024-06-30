@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
       <script>
-             function login(){
+             function login(event){
+                   event.preventDefault();
                 let p=document.getElementById("email").value;
                 let q=document.getElementById("password").value;
 
@@ -20,12 +21,12 @@
 </head>
 <body>
     <center>
-          <form>
-            Email<input type="email" id="email" placeholder="enter your Register email">
-            Password<input type="password" id="password" placeholder="enter your password">
+          <form onsubmit="login(event)">
+            Email<input type="email" id="email" placeholder="enter your Register email" required>
+            Password<input type="password" id="password" placeholder="enter your password" required>
+          
+          <button type="submit"> Login </button>
           </form>
-
-          <input type="button" id="login" onclick="login()" value="Login">
-    </center>
+     </center>
 </body>
 </html>
